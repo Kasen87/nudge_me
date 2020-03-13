@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# This script is meant to be run in a fresh environment to set the project up for the first time
+
+
+# Set up NVM using the install/update script available on git
+# => https://github.com/nvm-sh/nvm#installing-and-updating
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
