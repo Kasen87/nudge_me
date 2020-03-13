@@ -8,5 +8,23 @@
 # Set up NVM using the install/update script available on git here:
 # => https://github.com/nvm-sh/nvm#installing-and-updating
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash;
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# We want version 13.* of Node installed and ready
+
+if [ $(nvm ls 13) == "N/A" ] 2> /dev/null
+then
+  echo "NodeJS v13.* is not installed";
+  echo "Hold on. Attempting to install NodeJS v13.* through NVM...";
+  nvm install 13;
+else
+  echo "NodeJS v13.* is installed";
+  echo "Nothing to do here. Move along.";
+fi
+
+#TODO: Check if we are currently using nodejs v13.* or not in the pwd
+#==> and if not, we should switch to using that version
