@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd ~/nudge_src/nudge_me/;
+
+node app.js;
