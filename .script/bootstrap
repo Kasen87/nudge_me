@@ -1,30 +1,12 @@
 #!/usr/bin/env bash
 
-# This script is meant to be run in a fresh environment
-# to set the project up for the first time.
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash       # This gets NVM v0.35.3 install script from https://github.com/nvm-sh/nvm#installing-and-updating
 
+. $HOME/.nvm/nvm.sh                                                                   # This allows us to use NVM in our script
 
-# Let's get NVM first.
-# Set up NVM using the install/update script available on git here:
-# => https://github.com/nvm-sh/nvm#installing-and-updating
-
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash;
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# We want version 13.* of Node installed and ready
-
-if [ $(nvm ls 13) == "N/A" ] 2> /dev/null
+if [ $(nvm ls 13) == "N/A" ] 2> /dev/null                                             # This checks if NodeJS version 13.* is installed
 then
-  echo "NodeJS v13.* is not installed";
-  echo "Hold on. Attempting to install NodeJS v13.* through NVM...";
-  nvm install 13;
-else
-  echo "NodeJS v13.* is installed";
-  echo "Nothing to do here. Move along.";
+  echo "NodeJS v13.* is not installed"
+  echo "Hold on. Attempting to install NodeJS v13.* through NVM"
+  nvm install 13 --latest-npm                                                         # Install NodeJS version 13.* through NVM along with latest npm
 fi
-
-#TODO: Check if we are currently using nodejs v13.* or not in the pwd
-#==> and if not, we should switch to using that version
