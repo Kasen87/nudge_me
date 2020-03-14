@@ -4,7 +4,8 @@
   "description": "A backend NodeJS for a re-imagining of a task-list application",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "watch": "jest --watch"
   },
   "repository": {
     "type": "git",
