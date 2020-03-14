@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd ~/nudge_src/nudge_me/
+
+.script/bootstrap
+
+. $HOME/.nvm/nvm.sh
+
+nvm exec 13 node app.js

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash       # This gets NVM v0.35.3 install script from https://github.com/nvm-sh/nvm#installing-and-updating
+
+. $HOME/.nvm/nvm.sh                                                                   # This allows us to use NVM in our script
+
+if [ $(nvm ls 13) == "N/A" ] 2> /dev/null                                             # This checks if NodeJS version 13.* is installed
+then
+  echo "NodeJS v13.* is not installed"
+  echo "Hold on. Attempting to install NodeJS v13.* through NVM"
+  nvm install 13 --latest-npm                                                         # Install NodeJS version 13.* through NVM along with latest npm
+fi

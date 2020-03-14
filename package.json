@@ -1,0 +1,22 @@
+{
+  "name": "nudge_me",
+  "version": "0.0.1",
+  "description": "A backend NodeJS for a re-imagining of a task-list application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasen87/nudge_me.git"
+  },
+  "author": "Joshua R. Engel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kasen87/nudge_me/issues"
+  },
+  "homepage": "https://github.com/Kasen87/nudge_me#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
