@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Kasen87/nudge_me#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
