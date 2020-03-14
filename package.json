@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Kasen87/nudge_me/issues"
   },
-  "homepage": "https://github.com/Kasen87/nudge_me#readme"
+  "homepage": "https://github.com/Kasen87/nudge_me#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
